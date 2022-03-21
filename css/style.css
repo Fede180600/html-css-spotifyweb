@@ -41,7 +41,7 @@ ul {
 /* HEADER */
 header {
     height: 100px;
-    width: calc(100% - 400px);
+    width: calc(100% - 350px);
     background-color: rgba(8, 11, 18, .8);
     position: fixed;
     top: 0;
@@ -76,7 +76,7 @@ main {
 
 /* sidebar */
 main>.sidebar {
-    width: 400px;
+    width: 350px;
     height: calc(100vh - 120px);
     background-color: rgb(0, 0, 0);
     float: left;
@@ -249,7 +249,7 @@ li.playlist-name {
 /* /sidebar */
 .col-main {
     float: left;
-    width: calc(100% - 400px);
+    width: calc(100% - 350px);
     height: calc(100vh - 120px);
     overflow-y: auto;
 
@@ -293,17 +293,32 @@ li.main-nav-item.white-hover:hover {
 
 h2.section-title {
     font-size: 2.2rem;
+    margin-top: 2em;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8f8f8f;
+    line-height: 65px;
+    
 }
 
 .box-playlists {
     margin-top: 2em;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .card {
-    width: calc(100% / 6 - 20px);
-    margin: 0 20px;
+    width: 259.5px;
+    margin: 0 6.5px 20px;
+    flex-shrink: 1;
+}
+
+.card img {
+    width: 100%;
 }
 
 .card:first-child {
@@ -318,7 +333,7 @@ h2.section-title {
     text-align: center;
 }
 .card .card-title {
-    font-size: 1.4rem;
+    font-size: 1.8em;
     margin: .5em 0;
 }
 .card-subtitle {
