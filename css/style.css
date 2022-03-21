@@ -10,6 +10,7 @@ body {
     font-size: 62.5%;
     height: 100vh;
     width: 100%;
+    color: white;
 }
 
 a {
@@ -18,6 +19,18 @@ a {
 
 img {
     width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.item:hover {
+    color: white;
+}
+
+.sidebar-footer-top:hover {
+    color: white;
 }
 /* HEADER */
 header {
@@ -51,12 +64,16 @@ main {
     overflow-y: auto;
 }
 
-main>.col-aside {
-    height: 100%;
+main>.sidebar {
     width: 400px;
+    height: calc(100vh - 120px);
     background-color: rgb(0, 0, 0);
 }
 
+.sidebar-top {
+    height: 85%;
+    /* background-color: rgb(182, 182, 19); */
+}
 
 .logo-container {
     display: inline-block;
@@ -88,9 +105,9 @@ main>.col-aside {
     right: -5%;
 }
 
-main .col-aside>.row-aside {
-    height: 50px;
-    line-height: 50px;
+.sidebar>.sidebar-top>.row-sidebar {
+    height: 40px;
+    line-height: 40px;
     padding-left: 1.8em;
     margin-bottom: 1em;
 
@@ -102,22 +119,119 @@ main .col-aside>.row-aside {
     border-left: 3px solid #b4ff31;
 }
 
-.row-aside>.container-img-aside {
+
+.row-sidebar>.container-img-sidebar {
     display: inline-block;
     height: 80%;
     width: 10%;
     vertical-align: middle;
-
+    
     /* TEST */
     /* background-color: coral; */
 }
 
-.row-aside>span {
+.row-sidebar>span {
     font-size: 1.2rem;
     font-weight: 600;
-    color: white;
+    color: #6f6f6f;
     vertical-align: middle;
     margin-left: .3em;
+}
+
+span.white {
+    color: white;
+}
+
+ul.sidebar-list {
+    margin-left: 2em;
+    margin-top: 3em;
+}
+
+li.new-playlist>h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: .8em;
+}
+
+.plus-square {
+    display: inline-block;
+    font-size: 6rem;
+    line-height: 70px;
+    text-align: center;
+    color:black;
+    height: 70px;
+    width: 70px;
+    background-color: #6f6f6f;
+    vertical-align: middle;
+}
+
+li.new-playlist>span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #6f6f6f;
+    vertical-align: middle;
+    margin-left: .5em;
+}
+
+ul.sub-list-sidebar {
+    margin-top: 1.5em;
+}
+
+li.playlist-name {
+    color: #6f6f6f;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.sidebar-footer {
+    width: 100%;
+    margin-top: 5%;
+    height: 10%;
+}
+
+.sidebar-footer-top {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #6f6f6f;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:#6f6f6f;
+}
+
+.fa-arrow-alt-circle-down {
+    margin-right: 1em;
+}
+
+.sidebar-footer-bottom {
+    width: 90%;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.sidebar-footer-user {
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    background-color: #6f6f6f;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.sidebar-footer-user>img {
+    height: auto;
+    width: 35px;
+}
+
+.sidebar-footer-bottom-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: .5em;
+    line-height: 80px;
+    vertical-align: middle;
 }
 /* /MAIN */
 
