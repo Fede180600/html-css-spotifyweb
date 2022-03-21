@@ -13,6 +13,12 @@ body {
     color: white;
 }
 
+.clerafix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 a {
     text-decoration: none;
 }
@@ -55,19 +61,26 @@ header>a {
     right: 1%;
     border-radius: 50px;
 }
+
+header>a:hover {
+    transform: scale(1.2);
+    right: 2%;
+}
 /* /HEADER */
 
 /* MAIN */
 main {
     height: calc(100% - 120px);
     background-color: rgb(20, 25, 34);
-    overflow-y: auto;
 }
 
+/* sidebar */
 main>.sidebar {
     width: 400px;
     height: calc(100vh - 120px);
     background-color: rgb(0, 0, 0);
+    float: left;
+    overflow: hidden;
 }
 
 .sidebar-top {
@@ -223,7 +236,7 @@ li.playlist-name {
 
 .sidebar-footer-user>img {
     height: auto;
-    width: 35px;
+    width: 40px;
 }
 
 .sidebar-footer-bottom-text {
@@ -233,6 +246,87 @@ li.playlist-name {
     line-height: 80px;
     vertical-align: middle;
 }
+/* /sidebar */
+.col-main {
+    float: left;
+    width: calc(100% - 400px);
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+
+    /* TEST */
+    /* background-color: #b4ff31; */
+}
+
+.container {
+    width: 98%;
+    margin: 60px auto 0;
+    /* background-color: #8a2f2f; */
+}
+
+.main-nav-container {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 110px;
+    text-align: center;
+
+    /* background-color: aqua; */
+}
+
+nav.main-nav li.main-nav-item {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7a7a7a;
+    margin: 0 1em;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+li.half-border-bottom {
+  background: linear-gradient(#bfff31,#bfff31) bottom no-repeat;
+  background-size: 40% 4px;
+}
+
+li.main-nav-item.white-hover:hover {
+    color: white;
+}
+
+h2.section-title {
+    font-size: 2.2rem;
+}
+
+.box-playlists {
+    margin-top: 2em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card {
+    width: calc(100% / 6 - 20px);
+    margin: 0 20px;
+}
+
+.card:first-child {
+    margin-left: 0;
+}
+
+.card-last-child {
+    margin-right: 0;
+}
+
+.card>.card-bottom {
+    text-align: center;
+}
+.card .card-title {
+    font-size: 1.4rem;
+    margin: .5em 0;
+}
+.card-subtitle {
+    font-size: 1.1rem;
+    color: #6f6f6f;
+    font-weight: 600;
+}
+
 /* /MAIN */
 
 /* FOOTER */
