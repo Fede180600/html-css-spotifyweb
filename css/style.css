@@ -51,6 +51,44 @@ main>.col-aside {
     width: 20%;
     background-color: rgb(0, 0, 0);
 }
+
+main .col-aside>.row-aside {
+    height: 50px;
+    background-color: blueviolet;
+    margin-bottom: 1em;
+}
+
+.logo-container {
+    display: inline-block;
+    position: relative;
+}
+
+.logo {
+    height: 100px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    padding-top: .5em;
+    padding-left: .5em;
+}
+
+.fa-spotify {
+    font-size: 3.5rem;
+    vertical-align: middle;
+}
+
+.logo>span {
+    vertical-align: middle;
+}
+
+.fa-registered {
+    font-size: .5rem;
+    position: absolute;
+    top: 25%;
+    right: -5%;
+    
+}
+
 /* /MAIN */
 
 /* FOOTER */
