@@ -15,6 +15,10 @@ body {
 a {
     text-decoration: none;
 }
+
+img {
+    width: 100%;
+}
 /* HEADER */
 header {
     height: 100px;
@@ -44,6 +48,7 @@ header>a {
 main {
     height: calc(100% - 120px);
     background-color: rgb(20, 25, 34);
+    overflow-y: auto;
 }
 
 main>.col-aside {
@@ -52,11 +57,6 @@ main>.col-aside {
     background-color: rgb(0, 0, 0);
 }
 
-main .col-aside>.row-aside {
-    height: 50px;
-    background-color: blueviolet;
-    margin-bottom: 1em;
-}
 
 .logo-container {
     display: inline-block;
@@ -86,9 +86,39 @@ main .col-aside>.row-aside {
     position: absolute;
     top: 25%;
     right: -5%;
-    
 }
 
+main .col-aside>.row-aside {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 1.8em;
+    margin-bottom: 1em;
+
+    /* TEST */
+    /* background-color: blueviolet; */
+}
+
+.border-left-green {
+    border-left: 3px solid #b4ff31;
+}
+
+.row-aside>.container-img-aside {
+    display: inline-block;
+    height: 80%;
+    width: 10%;
+    vertical-align: middle;
+
+    /* TEST */
+    /* background-color: coral; */
+}
+
+.row-aside>span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    vertical-align: middle;
+    margin-left: .3em;
+}
 /* /MAIN */
 
 /* FOOTER */
