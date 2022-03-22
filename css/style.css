@@ -84,7 +84,8 @@ main>.sidebar {
 }
 
 .sidebar-top {
-    height: 85%;
+    height: calc(100% - 130px);
+    min-height: 500px;
     /* background-color: rgb(182, 182, 19); */
 }
 
@@ -200,7 +201,7 @@ li.playlist-name {
 .sidebar-footer {
     width: 100%;
     margin-top: 5%;
-    height: 10%;
+    height: 130px;
 }
 
 .sidebar-footer-top {
