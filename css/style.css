@@ -1,3 +1,8 @@
+:root {
+    --footer-height: 120px;
+    --sidebar-width-md: 300px;
+    --sidebare-width-xs: 80px;
+}
 /* RESET */
 * {
     margin: 0;
@@ -41,7 +46,7 @@ ul {
 /* HEADER */
 header {
     height: 100px;
-    width: calc(100% - 350px);
+    width: calc(100% - var(--sidebar-width-md));
     background-color: rgba(8, 11, 18, .8);
     position: fixed;
     top: 0;
@@ -76,11 +81,17 @@ main {
 
 /* sidebar */
 main>.sidebar {
-    width: 350px;
+    width: var(--sidebar-width-md);
     height: calc(100vh - 120px);
     background-color: rgb(0, 0, 0);
     float: left;
     overflow: hidden;
+}
+
+@media screen and (max-width: 600px){
+    main>.sidebar {
+        width: var(--sidebare-width-xs);
+    }
 }
 
 .sidebar-top {
@@ -95,17 +106,18 @@ main>.sidebar {
 }
 
 .logo {
-    height: 100px;
-    font-size: 2.5rem;
+    height: 80px;
+    font-size: 3em;
     font-weight: 600;
     color: white;
-    padding-top: .5em;
-    padding-left: .5em;
+    padding-top: .6em;
+    padding-left: .4em;
 }
 
 .fa-spotify {
-    font-size: 3.5rem;
+    font-size: 1.5em;
     vertical-align: middle;
+    padding-bottom: .2em;
 }
 
 .logo>span {
@@ -167,6 +179,10 @@ li.new-playlist>h2 {
     margin-bottom: .8em;
 }
 
+#create-playlist:hover >* {
+    color: white;
+}
+
 .plus-square {
     display: inline-block;
     font-size: 6rem;
@@ -179,7 +195,7 @@ li.new-playlist>h2 {
     vertical-align: middle;
 }
 
-li.new-playlist>span {
+li.new-playlist span {
     font-size: 1.5rem;
     font-weight: 600;
     color: #6f6f6f;
@@ -189,6 +205,8 @@ li.new-playlist>span {
 
 ul.sub-list-sidebar {
     margin-top: 1.5em;
+    overflow-y: auto;
+    height: 300px;
 }
 
 li.playlist-name {
@@ -250,7 +268,7 @@ li.playlist-name {
 /* /sidebar */
 .col-main {
     float: left;
-    width: calc(100% - 350px);
+    width: calc(100% - var(--sidebar-width-md));
     height: calc(100vh - 120px);
     overflow-y: auto;
 
@@ -259,15 +277,16 @@ li.playlist-name {
 }
 
 .container {
-    width: 98%;
-    margin: 60px auto 0;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding-bottom: 20px;
     /* background-color: #8a2f2f; */
 }
 
 .main-nav-container {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
-    padding-top: 110px;
+    padding-top: 120px;
     text-align: center;
 
     /* background-color: aqua; */
@@ -302,7 +321,6 @@ h2.section-title {
     font-weight: 600;
     color: #8f8f8f;
     line-height: 65px;
-    
 }
 
 .box-playlists {
@@ -310,32 +328,28 @@ h2.section-title {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    /* background-color: #b4ff31; */
 }
 
 .card {
-    width: 259.5px;
-    margin: 0 6.5px 20px;
-    flex-shrink: 1;
+    width: calc(280px - 2em);
+    margin-right: 2em;
 }
 
 .card img {
     width: 100%;
 }
 
-.card:first-child {
-    margin-left: 0;
+.br-50 {
+    border-radius: 50%;
+    overflow: hidden;
 }
-
-.card-last-child {
-    margin-right: 0;
-}
-
 .card>.card-bottom {
     text-align: center;
 }
 .card .card-title {
     font-size: 1.8em;
-    margin: .5em 0;
+    margin: .6em 0;
 }
 .card-subtitle {
     font-size: 1.1rem;
