@@ -364,5 +364,128 @@ footer {
     height: 120px;
     background-color: rgb(40, 40, 40);
 }
+
+.content-footer-container {
+    height: 100%;
+    display: flex;
+
+    /* test */
+    /* background-color: crimson; */
+}
+
+.content-footer-container .footer-left {
+    width: 15%;
+    min-width: 250px;
+    background-color: rgb(209, 123, 18);
+    flex-shrink: 0;
+}
+
+.content-footer-container .footer-center {
+    /* display: flex;
+    justify-content: center; */
+    position: relative;
+    flex-grow: 1;
+    /* background-color: blueviolet; */
+}
+
+
+.footer-center-btns-container {
+    width: 30%;
+    height: 50px;
+    margin: 20px auto 0;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-progress-bar {
+    font-size: 2em;
+    color: #6f6f6f;
+}
+
+.btn-progress-bar:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.btn-play {
+    font-size: 2.8em;
+    color: #6f6f6f;
+    text-align: center;
+    width: 49px;
+    height: 49px;
+    line-height: 41px;
+    border: 5px solid #6f6f6f;
+    border-radius: 50%;
+}
+
+.btn-play:hover {
+    color: white;
+    transform: scale(1.2);
+    border: 5px solid #ffffff;
+}
+
+
+.progress-bar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    /* test */
+    /* border: 1px solid black; */
+}
+
+.video-length {
+    font-size: 2em;
+}
+
+.footer-center .video-progress-bar {
+    /* display: inline-block; */
+    width: 80%;
+    margin: 10px auto 0;
+    height: 5px;
+    background-color: #5f5f5f;
+    border-radius: 5px;
+}
+
+.video-progress-bar .progress-bar {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #838383;
+}
+
+.video-progress-bar:hover .progress-bar {
+    background-color: #1DB954;
+}
+
+.progress-bar-point {
+    display: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+
+}
+
+.video-progress-bar:hover .progress-bar-point {
+    display: block;
+}
+
+.content-footer-container .footer-right {
+    width: 15%;
+    min-width: 250px;
+    background-color: rgb(27, 230, 54);
+    flex-shrink: 0;
+}
 /* /FOOTER */
 
