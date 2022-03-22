@@ -142,7 +142,7 @@ main>.sidebar {
 }
 
 .border-left-green {
-    border-left: 3px solid #b4ff31;
+    border-left: 3px solid #1DB954;
 }
 
 
@@ -303,7 +303,7 @@ nav.main-nav li.main-nav-item {
 }
 
 li.half-border-bottom {
-  background: linear-gradient(#bfff31,#bfff31) bottom no-repeat;
+  background: linear-gradient(#1DB954,#1DB954) bottom no-repeat;
   background-size: 40% 4px;
 }
 
@@ -374,10 +374,59 @@ footer {
 }
 
 .content-footer-container .footer-left {
-    width: 15%;
+    width: 300px;
     min-width: 250px;
-    background-color: rgb(209, 123, 18);
-    flex-shrink: 0;
+    /* background-color: rgb(209, 123, 18); */
+}
+
+.listening {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    margin-top: 20px;
+    vertical-align: middle;
+
+    /* background-color: #1DB954; */
+}
+
+.track-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.track-listening-title {
+    font-size: 2em;
+    /* margin-bottom: 5px; */
+}
+
+.track-listening-sub {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #6f6f6f
+}
+
+.footer-left-btns-container {
+    display: inline-block;
+    font-size: 2em;
+    color: #6f6f6f;
+    vertical-align: middle;
+    margin-top: 25px;
+    margin-left:  10px;
+}
+
+.footer-left-btn {
+    color: inherit
+}
+
+.footer-left-btn:hover {
+    color: white;
+}
+
+.footer-left-btn.heart:hover {
+    color: rgb(255, 41, 41);
 }
 
 .content-footer-container .footer-center {
@@ -482,10 +531,65 @@ footer {
 }
 
 .content-footer-container .footer-right {
-    width: 15%;
+    width: 300px;
     min-width: 250px;
-    background-color: rgb(27, 230, 54);
     flex-shrink: 0;
+
+    /* background-color: rgb(27, 230, 54); */
+}
+
+.footer-right-btns-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+    color: white;
+
+    /* background-color: #b91d9f; */
+}
+
+.footer-right-btn {
+    color: inherit;
+}
+
+.footer-right-btn:hover {
+    color: #1DB954;
+}
+
+.volume {
+    width: 50%;
+    height: 5px;
+    background-color: #6f6f6f;
+    border-radius: 5px;
+}
+
+.volume-level {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    background-color: #8f8f8f;
+    border-radius: 5px;
+}
+
+.volume:hover > .volume-level {
+    background-color: white;
+}
+
+.volume-point {
+    display: none;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    height: 15px;
+    width: 15px;
+    background-color: #1DB954;
+    border-radius: 50%;
+}
+
+.volume:hover .volume-point {
+    display: block;
 }
 /* /FOOTER */
 
