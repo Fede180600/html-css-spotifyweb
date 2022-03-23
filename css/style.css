@@ -118,18 +118,45 @@ main>.sidebar {
     font-size: 1.5em;
     vertical-align: middle;
     padding-bottom: .2em;
+    color: #1DB954;
 }
 
-.logo>span {
-    vertical-align: middle;
-}
-
-.fa-registered {
+i.fa-registered {
     font-size: .5rem;
     position: absolute;
     top: 25%;
     right: -5%;
 }
+
+@media screen and (max-width: 600px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        padding: 10px 0 0 0;
+        height: auto;
+        text-align: center;
+
+        /* background-color: aliceblue; */
+    }
+
+    .fa-spotify {
+        padding
+        font-size: 1.5em;
+        color: #1DB954;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    i.fa-registered {
+        display: none;
+    }
+}   
 
 .sidebar>.sidebar-top>.row-sidebar {
     height: 40px;
@@ -168,6 +195,10 @@ span.white {
     color: white;
 }
 
+span.white-hover:hover {
+    color: white;
+}
+
 ul.sidebar-list {
     margin-left: 2em;
     margin-top: 3em;
@@ -179,8 +210,12 @@ li.new-playlist>h2 {
     margin-bottom: .8em;
 }
 
-#create-playlist:hover >* {
+#create-playlist:hover >span {
     color: white;
+}
+
+#create-playlist:hover >.plus-square {
+    background-color: white;
 }
 
 .plus-square {
@@ -332,12 +367,9 @@ h2.section-title {
 }
 
 .card {
+    position: relative;
     width: calc(280px - 2em);
     margin-right: 2em;
-}
-
-.card img {
-    width: 100%;
 }
 
 .br-50 {
