@@ -1,7 +1,8 @@
 :root {
     --footer-height: 120px;
     --sidebar-width-md: 300px;
-    --sidebare-width-xs: 80px;
+    --sidebar-width-s: 270px;
+    --sidebar-width-xs: 80px;
 }
 /* RESET */
 * {
@@ -80,9 +81,15 @@ header>a:hover {
     margin-right: 2%;
 }
 
+@media screen and (max-width: 700px) {
+    header {
+        width: calc(100% - var(--sidebar-width-s))
+    }
+}
+
 @media screen and (max-width: 600px) {
     header {
-        width: calc(100% - var(--sidebare-width-xs));
+        width: calc(100% - var(--sidebar-width-xs));
         position: fixed;
         top: 0;
         right: 0;
@@ -118,18 +125,24 @@ main>.sidebar {
     background-color: rgb(0, 0, 0);
     float: left;
     overflow: hidden;
+  
+}
+
+@media screen and (max-width: 700px) {
+    main>.sidebar {
+        width: var(--sidebar-width-s);
+    }
 }
 
 @media screen and (max-width: 600px){
     main>.sidebar {
-        width: var(--sidebare-width-xs);
+        width: var(--sidebar-width-xs);
     }
 }
 
 .sidebar-top {
     height: calc(100% - 130px);
-    min-height: 500px;
-    /* background-color: rgb(182, 182, 19); */
+    min-height: 750px;
 }
 
 .logo-container {
@@ -313,6 +326,8 @@ ul.sub-list-sidebar {
     margin-top: 1.5em;
     overflow-y: auto;
     height: 300px;
+    min-height: 250px;
+    
 }
 
 li.playlist-name {
@@ -324,8 +339,7 @@ li.playlist-name {
 
 .sidebar-footer {
     width: 100%;
-    margin-top: 5%;
-    height: 130px;
+    height: 100px;
 }
 
 .sidebar-footer-top {
@@ -409,6 +423,8 @@ li.playlist-name {
     }
 }
 /* /sidebar */
+
+/* content col-main */
 .col-main {
     float: left;
     width: calc(100% - var(--sidebar-width-md));
@@ -427,14 +443,20 @@ li.playlist-name {
     /* background-color: #8a2f2f; */
 }
 
+@media screen and (max-width: 700px) {
+    .col-main {
+        width: calc(100% - var(--sidebar-width-s));
+    }
+}
+
 @media screen and (max-width: 600px) {
     .col-main {
-        width: calc(100% - var(--sidebare-width-xs))
+        width: calc(100% - 80px)
     }
 
-    .container {
+    /* .container {
         width: 100%;
-    }
+    } */
 }
 .main-nav-container {
     width: 90%;
@@ -488,6 +510,7 @@ h2.section-title {
     position: relative;
     width: calc(100% / 6 - 2em);
     margin-right: 2em;
+    cursor: pointer;
 }
 
 /* settings of card width display lg>1100px */
@@ -498,19 +521,27 @@ h2.section-title {
     }
 }
 
-/* settings of card width display md>700px */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 800px) {
+    .card {
+        width: calc(100% / 2 - 1.5em);
+        margin: 1.5em 1.5em 0 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .card {
         width: calc(100% / 2 - 1em);
         margin: 1em 1em 0 0;
     }
 }
 
-/* settings of card width display s>600px */
-
 .card-top {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.card-top img {
+    display: block;
 }
 
 .layover-hover {
@@ -532,7 +563,7 @@ h2.section-title {
     transform: translate(-50%, -50%);
 }
 
-.card-top:hover .layover-hover {
+.card:hover .layover-hover {
     display: block;
 }
 
@@ -558,6 +589,7 @@ h2.section-title {
 /* FOOTER */
 footer {
     height: 120px;
+    width: 100%;
     background-color: rgb(40, 40, 40);
 }
 
@@ -565,37 +597,26 @@ footer {
     height: 100%;
     display: flex;
     justify-content: space-between;
-    /* test */
-    /* background-color: crimson; */
 }
 
+/* footer left */
 .content-footer-container .footer-left {
     width: 300px;
-    min-width: 250px;
-    /* background-color: rgb(209, 123, 18); */
-}
-
-.listening {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin-left: 20px;
-    margin-top: 20px;
-    vertical-align: middle;
-
+    min-width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     /* background-color: #1DB954; */
 }
 
-.track-title {
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 25px;
-    margin-left: 15px;
+.listening {
+    width: 20%;
+    margin: 10px;
 }
 
 .track-listening-title {
     font-size: 2em;
-    /* margin-bottom: 5px; */
 }
 
 .track-listening-sub {
@@ -604,17 +625,29 @@ footer {
     color: #6f6f6f
 }
 
+.track-listening-title:hover {
+    text-decoration: underline;
+}
+
+.track-listening-sub:hover {
+    text-decoration: underline;
+}
+
 .footer-left-btns-container {
-    display: inline-block;
-    font-size: 2em;
+    font-size: 1.5rem;
     color: #6f6f6f;
-    vertical-align: middle;
-    margin-top: 25px;
-    margin-left:  10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .footer-left-btn {
-    color: inherit
+    color: inherit;
+    margin-left: 5px;
 }
 
 .footer-left-btn:hover {
@@ -624,28 +657,26 @@ footer {
 .footer-left-btn.heart:hover {
     color: rgb(255, 41, 41);
 }
+/* /footer left */
 
+/* footer center */
 .content-footer-container .footer-center {
-    /* display: flex;
-    justify-content: center; */
     position: relative;
     width: 40%;
-    /* background-color: blueviolet; */
 }
 
 
 .footer-center-btns-container {
-    width: 30%;
     height: 50px;
     margin: 20px auto 0;
-    /* background-color: aqua; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .btn-progress-bar {
     font-size: 2em;
+    margin: 0 5px;
     color: #6f6f6f;
 }
 
@@ -667,15 +698,12 @@ footer {
 
 .progress-bar-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 65%;
     position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translate(-50%,-50%);
-
-    /* test */
-    /* border: 1px solid black; */
 }
 
 .video-length {
@@ -683,7 +711,6 @@ footer {
 }
 
 .footer-center .video-progress-bar {
-    /* display: inline-block; */
     width: 80%;
     margin: 10px 15px;
     height: 5px;
@@ -718,13 +745,13 @@ footer {
 .video-progress-bar:hover .progress-bar-point {
     display: block;
 }
+/* /footer center */
 
+/* footer right */
 .content-footer-container .footer-right {
-    width: 300px;
-    min-width: 250px;
+    width: 250px;
+    min-width: 200px;
     flex-shrink: 0;
-
-    /* background-color: rgb(27, 230, 54); */
 }
 
 .footer-right-btns-container {
@@ -735,8 +762,6 @@ footer {
     height: 100%;
     font-size: 2em;
     color: white;
-
-    /* background-color: #b91d9f; */
 }
 
 .footer-right-btn {
@@ -780,5 +805,8 @@ footer {
 .volume:hover .volume-point {
     display: block;
 }
+
+
+/* /footer right */
 /* /FOOTER */
 
