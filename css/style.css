@@ -506,6 +506,15 @@ h2.section-title {
     line-height: 65px;
 }
 
+@media screen and (max-width: 600px) {
+    h2.section-title {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    .section-subtitle {
+        line-height: 30px;
+    }
+}
 .box-playlists {
     margin-top: 2em;
     display: flex;
