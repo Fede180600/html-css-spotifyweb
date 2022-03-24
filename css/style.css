@@ -48,14 +48,14 @@ ul {
     color: white;
 }
 
-.sidebar-footer-top:hover {
-    color: white;
-}
+
 /* HEADER */
 header {
     height: 100px;
     width: calc(100% - var(--sidebar-width-md));
     background-color: rgba(8, 11, 18, .8);
+    text-align: right;
+    padding-top: 30px;
     position: fixed;
     top: 0;
     right: 0;
@@ -71,15 +71,13 @@ header>a {
     border: 1px solid white;
     border-radius: 50px;
     padding: .8rem 2.2rem;
-    position: absolute;
-    right: 1%;
-    top: 60%;
-    transform: translateY(-50%);
+    display: inline-block;
+    margin-right: 5px;
 }
 
 header>a:hover {
     transform: scale(1.2);
-    margin-right: 2%;
+    margin-right: 30px;
 }
 
 @media screen and (max-width: 700px) {
@@ -106,9 +104,7 @@ header>a:hover {
         border: 1px solid white;
         padding: .8rem 2.2rem;
         border-radius: 50px;
-        position: absolute;
-        top: 60%;
-        transform: translateY(-50%);
+        display: inline-block; 
     }
 }
 /* /HEADER */
@@ -357,6 +353,10 @@ li.playlist-name {
 
 }
 
+.sidebar-footer-top:hover .fa-arrow-alt-circle-down {
+    color: white;
+}
+
 .fa-arrow-alt-circle-down {
     margin-right: 1em;
     font-size: 1.2rem;
@@ -368,6 +368,10 @@ li.playlist-name {
     font-size: 1.2rem;
     font-weight: 600;
     color:#6f6f6f;
+}
+
+.sidebar-footer-top:hover >span {
+    color: white;
 }
 
 .sidebar-footer-bottom {
@@ -400,6 +404,10 @@ li.playlist-name {
     margin-left: .5em;
     line-height: 80px;
     vertical-align: middle;
+}
+
+.sidebar-footer-bottom-text:hover {
+    font-weight: 800;
 }
 
 @media screen and (max-width: 600px) {
@@ -496,7 +504,7 @@ li.main-nav-item.white-hover:hover {
 
 h2.section-title {
     font-size: 2.2rem;
-    margin-top: 2em;
+    margin-top: 1.3em;
 }
 
 .section-subtitle {
@@ -630,6 +638,12 @@ footer {
 .listening {
     width: 20%;
     margin: 0 10px;
+    transition: all .5s ease-in-out 0s;
+}
+
+.listening:hover {
+    transform: scale(1.2);
+
 }
 
 .track-listening-title {
@@ -658,6 +672,7 @@ footer {
 .footer-left-btn {
     color: inherit;
     margin-left: 5px;
+    display: inline-block;
 }
 
 .footer-left-btn:hover {
@@ -666,6 +681,7 @@ footer {
 
 .footer-left-btn.heart:hover {
     color: rgb(255, 41, 41);
+    transform: scale(1.2);
 }
 
 @media screen and (max-width: 550px) {
@@ -713,7 +729,7 @@ footer {
 
 .btn-progress-bar {
     font-size: 2em;
-    margin: 0 5px;
+    margin: 0 10px;
     color: #6f6f6f;
 }
 
@@ -724,6 +740,7 @@ footer {
 
 .btn-play {
     font-size: 4em;
+    margin: 0 10px;
     color: #6f6f6f;
 }
 
@@ -742,6 +759,15 @@ footer {
     font-size: 2em;
 }
 
+@media screen and (max-width: 800px) {
+    .btn-play {
+    margin: 0 5px;
+    }
+    .video-length {
+        font-size: 1.8em;
+    }
+}
+
 .footer-center .video-progress-bar {
     width: 100%;
     margin: 10px 15px;
@@ -751,6 +777,9 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+    .btn-play {
+        margin: 0 4px;
+    }
     .btn-progress-bar {
         margin: 0 3px;
     }
